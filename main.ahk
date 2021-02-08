@@ -3,7 +3,7 @@ GroupAdd Swap, ahk_exe code.exe
 GroupAdd Swap, ahk_exe msedge.exe
 ;End::GroupActivate Swap
 
-~LAlt & Space::GroupActivate Swap
+LAlt & Space::GroupActivate Swap
 
 ;::!fn::Lionel
 ;::!ln::Ensfelder
@@ -37,9 +37,21 @@ return
 
 Home::Send {Volume_Up}
 End::Send {Volume_Down}
+
 PgDn::Send {Media_Prev}
 PgUp::Send {Media_Next}
 Pause::Send {Media_Play_Pause}
+
+LAlt & j::Send {Right}
+LAlt & f::Send {Left}
+LAlt & g::Send {Up}
+LAlt & h::Send {Down}
+
+!k::Send ^{PgDn}
+!d::Send ^{PgUp}
+!t::Send ^t
+!y::Send ^w
+
 return
 
 <^>!c::
