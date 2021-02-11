@@ -5,69 +5,76 @@ GroupAdd Swap, ahk_exe msedge.exe
 
 LAlt & Space::GroupActivate Swap
 
-;::!fn::Lionel
-;::!ln::Ensfelder
-;::!tel::0652401021
-;::!mail::ensfelder.lionel@gmail.com
-;::!adress::612 Avenue Maréchal Foch, 83000 Toulon
-::!site::https://lioens.dev
-::!linkedin::https://www.linkedin.com/in/lionel-ensfelder/
-::!github::https://github.com/LionelENSFELDER
-::!card::
-(
-Lionel ENSFELDER
-Avenue Marechal Foch, 83000 Toulon
-https://www.lioens.dev
-https://www.linkedin.com/in/lionel-ensfelder
-https://github.com/LionelENSFELDER
-)
+LAlt & Up::
+Send {Volume_Up}
 return
 
-;openToNewDesk(App)
-;{
-;	
-;	send #^d
-;	send #^{right}
-;	Run, %App%, ,max
-;}
-;LAlt & c::openToNewDesk("code")
-;LAlt & b::openToNewDesk("chrome")
+LAlt & Down::
+Send {Volume_Down}
 return
 
+LAlt & Left::
+Send {Media_Prev}
+return
 
-Home::Send {Volume_Up}
-End::Send {Volume_Down}
+LAlt & Right::
+Send {Media_Next}
+return
 
-PgDn::Send {Media_Prev}
-PgUp::Send {Media_Next}
-Pause::Send {Media_Play_Pause}
+LAlt & Pause::
+Send {Media_Play_Pause}
+return
 
-LAlt & j::Send {Right}
-LAlt & f::Send {Left}
-LAlt & g::Send {Up}
-LAlt & h::Send {Down}
+LAlt & j::
+Send {Left}
+return
 
-!k::Send ^{PgDn}
-!d::Send ^{PgUp}
+LAlt & i::
+Send {Up}
+return
+
+LAlt & u::
+Send ^{PgUp}
+return
+
+LAlt & k::
+Send {Down}
+return
+
+LAlt & l::
+Send {Right}
+return
+
+LAlt & o::
+Send ^{PgDn}
+return
+
 !t::Send ^t
-!y::Send ^w
-
 return
 
-<^>!c::
+!y::Send ^w
+return
+
+<^>!q::
 if WinExist("ahk_exe code.exe")
 WinActivate, ahk_exe code.exe
 WinWaitActive, ahk_exe code.exe
 return
 
-<^>!b::
+<^>!s::
 if WinExist("ahk_exe msedge.exe")
 WinActivate, ahk_exe msedge.exe
 WinWaitActive, ahk_exe msedge.exe
 return
 
-<^>!s::
-if WinExist("ahk_exe Spotify.exe")
-WinActivate, ahk_exe Spotify.exe
-WinWaitActive, ahk_exe Spotify.exe
+<^>!d::
+if WinExist("ahk_exe firefox.exe")
+WinActivate, ahk_exe firefox.exe
+WinWaitActive, ahk_exe firefox.exe
+return
+
+<^>!f::
+if WinExist("ahk_exe WindowsTerminal.exe")
+WinActivate, ahk_exe WindowsTerminal.exe
+WinWaitActive, ahk_exe WindowsTerminal.exe
 return
