@@ -1,0 +1,10 @@
+[user]
+	email = ensfelder.lionel@gmail.com
+  name = LionelENSFELDER
+[alias]
+  d = diff
+  st = status
+[hub]
+  protocol = https
+[github]
+	user = LionelENSFELDER
