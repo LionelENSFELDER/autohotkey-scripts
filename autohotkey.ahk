@@ -1,10 +1,10 @@
 ;Add as many window titles to the group.
 GroupAdd Swap, ahk_exe code.exe
-GroupAdd Swap, ahk_exe msedge.exe
+GroupAdd Swap, ahk_exe firefox.exe
 ;End::GroupActivate Swap
-LAlt & Space::GroupActivate Swap
+;LAlt & Space::GroupActivate Swap
 
-; Media
+; Media keys shortcuts
 LAlt & Up::
 Send {Volume_Up}
 return
@@ -25,7 +25,7 @@ LAlt & Pause::
 Send {Media_Play_Pause}
 return
 
-; Arrow keys
+; Arrow keys shortcuts
 LAlt & j::
 Send {Left}
 return
@@ -42,13 +42,14 @@ LAlt & l::
 Send {Right}
 return
 
-; RAlt & r::
-; Send ^{PgDn}
-; return
+; Browser tabs shortcuts
+LAlt & u::
+Send ^{PgDn}
+return
 
-; RAlt & z::
-; Send ^{PgUp}
-; return
+LAlt & o::
+Send ^{PgUp}
+return
 
 ; Browser shortcuts
 RAlt & r::
@@ -83,7 +84,7 @@ WinWaitActive, ahk_exe WindowsTerminal.exe
 return
 
 <^>!f::
-if WinExist("ahk_exe Spotify.exe")
-WinActivate, ahk_exe Spotify.exe
-WinWaitActive, ahk_exe Spotify.exe
+if WinExist("ahk_exe Explorer.exe")
+WinActivate, ahk_exe Explorer.exe
+WinWaitActive, ahk_exe Explorer.exe
 return
