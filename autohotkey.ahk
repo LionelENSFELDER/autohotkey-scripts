@@ -84,7 +84,7 @@ WinWaitActive, ahk_exe WindowsTerminal.exe
 return
 
 <^>!f::
-if WinExist("ahk_exe Explorer.exe")
-WinActivate, ahk_exe Explorer.exe
-WinWaitActive, ahk_exe Explorer.exe
+if WinExist("ahk_exe Explorer.EXE")
+WinActivate, ahk_exe Explorer.EXE
+WinWaitActive, ahk_exe Explorer.EXE
 return
